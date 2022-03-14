@@ -1,0 +1,146 @@
+@import "../../assets/css/Dimensions.scss";
+
+.contentHeader {
+  display: flex;
+  align-items: center;
+  align-items: stretch;
+  border-radius: 10px;
+  //height: 100%;
+  margin-bottom: 2em;
+  .contentImg {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $padding;
+    background: #0647a5;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .contentInfo {
+    width: 50%;
+    padding: $padding;
+    //color: white;
+    div {
+      h1 {
+        //color: white;
+        padding-left: 0;
+        border: none;
+      }
+    }
+  }
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 2em;
+  grid-auto-rows: 1fr;
+  margin-bottom: 2em;
+  a {
+    color: #000000 !important;
+    p {
+      opacity: 0.65;
+    }
+  }
+  div {
+    padding: 1em;
+    background: #fff;
+    text-decoration: none;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    transition: transform 0.3s cubic-bezier(0.34, 2, 0.6, 1),
+      box-shadow 0.2s ease;
+    border-radius: 4px;
+    height: 100%;
+
+    &:hover {
+      box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15);
+      h2 {
+        color: #0c4da1;
+      }
+    }
+
+    span {
+      border-radius: 100%;
+      background-color: #3333330f;
+      svg {
+        font-size: 45px;
+        padding: 10px;
+      }
+    }
+  }
+
+  .internalPortal,
+  .calendar {
+    grid-area: internalPortal;
+    span {
+      background-color: #0c4da11a;
+    }
+    path {
+      fill: #0c4da1;
+    }
+  }
+
+  .informationalPortal {
+    grid-area: informationalPortal;
+    span {
+      background-color: #1d95ae1a;
+    }
+    path {
+      fill: #1d95ae;
+    }
+  }
+  .eLearningPortal {
+    grid-area: eLearningPortal;
+    span {
+      background-color: #c7b24b1a;
+    }
+    path {
+      fill: #c7b24b;
+    }
+  }
+  .theJournalOfInitialCandidates {
+    grid-area: theJournalOfInitialCandidates;
+    span {
+      background-color: #cd81501a;
+    }
+    path {
+      fill: #cd8150;
+    }
+  }
+  .adminPanel {
+    grid-area: adminPanel;
+    span {
+      background-color: #db31341a;
+    }
+    path {
+      fill: #db3134;
+    }
+  }
+}
+
+/* Responsive */
+@media only screen and (max-width: 959px) {
+  .gridContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1em;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+  }
+  .contentHeader {
+    flex-direction: column;
+    .contentImg,
+    .contentInfo {
+      width: 100%;
+    }
+    .contentImg {
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 0px;
+    }
+  }
+}

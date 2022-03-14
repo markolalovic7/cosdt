@@ -1,0 +1,13 @@
+.customReportsControl{
+  display: flex;
+  form{
+    padding: 0!important;
+    margin: 0!important;
+    border: none!important;
+    &.formSelect{
+      display: flex;
+      margin: 0 15px;
+    }
+  }
+}
+

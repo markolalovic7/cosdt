@@ -1,0 +1,28 @@
+.breadcrumbs {
+  display: flex;  
+  margin-left: -18px;
+  margin-bottom: 20px;
+  .bc {
+    &:last-child a + span {
+      display: none;
+    }
+    span {
+      text-transform: capitalize;
+    }
+    a + span {
+      margin: 0 10px;
+      opacity: 0.45;
+    }
+  }
+  a {
+    color: initial;
+    opacity: 0.45;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .breadcrumbs {
+    margin-left: 0px;
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,9 @@
+.simple-pagination {
+  .ant-pagination-simple-pager  input {
+    border: none !important;
+    padding: 0 !important;
+    width: 30px !important;
+    margin: 0 !important;
+    pointer-events: none !important;
+  }
+}

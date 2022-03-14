@@ -1,0 +1,155 @@
+@import "../../../assets/css/Dimensions.scss";
+
+.menuIcon {
+  display: none;
+}
+
+.navigation {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: #0647a5;
+  z-index: 999;
+  overflow: hidden;
+  transition: 0.4s;
+  transition-delay: 0.2s;
+  &:hover {
+    transition: width 0.4s;
+    transition-delay: 0.2s;
+  }
+
+  .logo_wrap {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    text-decoration: none;
+    position: relative;
+    .closeMenu {
+      display: none;
+    }
+    img {
+      width: 33px;
+      margin-left: 3px;
+      margin-top: 5px;
+      margin-right: 5px;
+    }
+    span {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 20px;
+    }
+  }
+
+  .navigationMenu {
+    margin-top: 50px;
+    background: transparent;
+    border: none;
+    max-height: calc(100% - 145px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    :global {
+      .ant-menu-item::after {
+        border-right: 3px solid #0a55b7;
+      }
+      .ant-menu-item-selected {
+        background: none !important;
+        transition: 0.4s !important;
+        transition-delay: 0.2s !important;
+        svg {
+          opacity: 1;
+        }
+      }
+      span.anticon {
+        margin-right: 14px;
+      }
+      .ant-menu-submenu-open {
+        svg {
+          opacity: 1;
+        }
+      }
+    }
+    li {
+      transition: 0.4s !important;
+      transition-delay: 0.2s !important;
+      padding-left: 7px !important;
+      background: transparent !important;
+
+      svg {
+        opacity: 0.6;
+        font-size: 18px;
+      }
+      &:hover {
+        background: transparent;
+        svg {
+          opacity: 1;
+        }
+      }
+
+      div {
+        padding-left: 0 !important;
+      }
+      span,
+      a {
+        color: #ffffff !important;
+      }
+      a {
+        &:hover {
+          color: #ffffff;
+        }
+      }
+      path {
+        fill: #ffffff;
+      }
+      i::after,
+      i::before {
+        background: -webkit-gradient(
+          linear,
+          left top,
+          right top,
+          from(#ffffff),
+          to(#ffffff)
+        ) !important;
+        background: linear-gradient(to right, #ffffff, #ffffff) !important;
+      }
+
+      ul {
+        margin-top: 0;
+        background-color: transparent !important;
+        li {
+          color: #ffffff;
+          padding-left: 31px !important;
+        }
+      }
+    }
+  }
+}
+
+/* Responsive */
+
+@media only screen and (min-width: 961px) {
+  .navigation {
+    &:hover {
+      width: 300px !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .menuIcon {
+    display: block;
+    position: absolute;
+    left: 45px;
+    margin: 4px 0;
+  }
+  .closeMenu {
+    display: block !important;
+    position: absolute;
+    right: -95px;
+    z-index: 9;
+    top: 3px;
+    svg {
+      font-size: 15px;
+    }
+  }
+}

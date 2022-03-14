@@ -1,0 +1,28 @@
+stages:
+  - frontend
+
+before_script:
+  - export PATH=/root/.nvm/versions/node/v12.14.1/bin:$PATH
+
+frontend-build:
+  stage: frontend
+  only:
+    - develop
+  tags:
+    - cosdt
+  script:
+    - npm install
+    - export CI=false && npm run build
+    - rsync -avz --progress ./build/* root@cosdt.datumsolutions.me:/var/www/html/frontend
+
+frontend-build-prod:
+  stage: frontend
+  when: manual
+  tags:
+    - cosdt
+  script:
+    - sed -i 's/cosdt.datumsolutions/iis.cosdt/g' src/core/Configuration.ts
+    - cat src/core/Configuration.ts
+    - npm install
+    - export CI=false && npm run build
+    - rsync -avz --progress ./build/* root@iis.cosdt.me:/var/www/html/frontend

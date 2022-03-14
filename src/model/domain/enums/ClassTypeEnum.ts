@@ -1,0 +1,5 @@
+export enum ClassTypeEnum {
+  SUDIJE = "SUDIJE",
+  TUZIOCI = "TUZIOCI",
+  SUDIJE_I_TUZIOCI= "SUDIJE_I_TUZIOCI"
+}

@@ -1,0 +1,22 @@
+@import "../../../assets/css/Dimensions.scss";
+
+.mainLayout {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: auto;
+  flex: 1;
+
+  .mainContentWrap {
+    position: relative;
+    overflow: auto;
+    flex: 1;
+    padding: 0 2em 2em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .mainContentWrap {
+    padding: 1em !important;
+  }
+}

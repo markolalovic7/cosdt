@@ -1,0 +1,37 @@
+.logContainer {
+  height: 20px;
+  transition: height 0.4s;
+  border-top: 1px solid #ececec;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    flex-direction: column-reverse;
+    height: 250px;
+    overflow-y: auto;
+    position: absolute;
+    bottom: 0;
+    background-color: #fbfbfb;
+    color: black;
+    padding: 0 0 1rem 0;
+    width: 100%;
+    .topBar {
+      border-bottom: 1px solid #ececec;
+      background: white;
+      height: 20px;
+    }
+  }
+
+  .logEntry {
+    width: 100%;
+    .entryType {
+      font-weight: bold;
+    }
+    .entryTime {
+      text-decoration: underline;
+    }
+    .entryMsg {
+    }
+  }
+}

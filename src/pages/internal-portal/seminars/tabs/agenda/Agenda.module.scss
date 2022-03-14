@@ -1,0 +1,147 @@
+
+.form-in-agenda {
+  position: fixed;
+  bottom: 0;
+}
+
+.agendaFormWrap {
+  padding: 0 !important;
+
+}
+#detailsForm{
+
+  .ant-row.ant-form-item {
+    margin-bottom: 5px!important;
+  }
+}
+.mainContentWrap {
+  padding: 0 2em 2em;
+
+  .endTime {
+    border-radius: 3px;
+    padding: 5px 10px;
+    background-color: #ff4d4f;
+    color: white;
+    display: inline-block;
+    margin-top: 1em;
+  }
+
+  .agendaRight {
+    position: relative;
+    padding: 0 4em;
+    margin-top: -7px;
+    height: 100vh;
+
+    .container {
+      position: fixed!important;
+      bottom: 0!important;
+      .ant-row.ant-form-item {
+        margin-bottom: 5px!important;
+      }
+    }
+  }
+
+  .agendaForm {
+    margin-top: -7px;
+    // padding-top: 20px !important;
+  }
+
+  .timelineAgenda {
+    display: flex;
+    flex-direction: column-reverse;
+
+    :global {
+      .ant-timeline-item-label {
+        top: -5px;
+        width: calc(180px - 35px);
+        font-weight: bold;
+        text-decoration: underline;
+        color: #2196f3;
+      }
+
+      .ant-timeline-item-tail,
+      .ant-timeline-item-head.ant-timeline-item-head-blue {
+        left: 0 !important;
+      }
+
+      svg,
+      b {
+        margin-right: 7px;
+      }
+
+      b {
+        display: flex;
+        white-space: nowrap;
+        width: 110px;
+        min-width: 110px;
+        align-items: center;
+        justify-content: flex-end;
+      }
+
+      .ant-timeline-item-content {
+        position: relative;
+        padding-top: 10px;
+        left: 0 !important;
+        width: 100% !important;
+        top: 30px;
+      }
+    }
+  }
+
+  .agendaActions {
+    position: absolute;
+    right: 5px;
+    bottom: 10px;
+
+    button {
+      height: auto;
+      padding: 0;
+      margin-left: auto;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  .agendaItem {
+    font-size: 1.1rem;
+    margin-bottom: 1em;
+    display: flex;
+    align-items: flex-start;
+
+    span:last-child em {
+      display: none;
+    }
+  }
+
+  .agendaDownload {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+  }
+}
+
+:global {
+  .agendaWrap {
+    margin-top: 4em;
+  }
+
+  @media only screen and (max-width: 1510px) {
+    .agendaWrap .agenda-row {
+      display: flex;
+      flex-direction: column-reverse;
+
+      .ant-col.ant-col-12 {
+        width: 80%;
+        max-width: none;
+        margin: 0 auto;
+        margin-bottom: 3em;
+        padding: 0;
+      }
+
+      .ant-col.ant-col-12.agenda-col {
+        position: relative;
+        left: -7px;
+      }
+    }
+  }
+}

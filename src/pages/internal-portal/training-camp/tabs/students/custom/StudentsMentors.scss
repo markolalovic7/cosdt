@@ -1,0 +1,42 @@
+.mentors-card {
+  border: 1px solid #1890ff;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+
+  .item-header {
+    display: flex;
+    flex-wrap: wrap;
+
+    .item-data {
+      margin: 5px 15px;
+    }
+
+    .form-item {
+      flex: 1;
+      padding: 0 10px;
+    }
+
+
+  }
+
+  .ant-form-item {
+    margin-bottom: 0;
+  }
+
+  .ant-input-disabled, .ant-picker-disabled {
+    background-color: transparent;
+    border: none;
+    color: #000000d9;
+    pointer-events: none;
+    input {
+      color: #000000d9;
+    }
+  }
+}
+
+
+
+
+
+

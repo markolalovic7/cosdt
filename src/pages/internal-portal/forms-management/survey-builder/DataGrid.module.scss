@@ -1,0 +1,65 @@
+.searchBox {
+  width: 200px;
+}
+
+.dataGridActions {
+  margin: 1em 0;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2em;
+  div:first-child {
+    button {
+      margin-right: 0;
+    }
+  }
+  div:last-child {
+    button {
+      margin-right: 0;
+    }
+  }
+}
+
+.dataGridActionsButton {
+  margin: 0 6px;
+}
+
+.filterInput {
+  width: 180px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.filterCheckbox {
+  width: 100%;
+  text-align: center;
+  padding: 5px 10px;
+}
+
+.filterOptions {
+  display: flex;
+  flex-direction: column;
+
+  .optionsGroup {
+    display: flex;
+    flex-direction: column;
+    max-height: 100px;
+    overflow-y: auto;
+    margin: 10px 0;
+  }
+
+  .option {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.filterActions {
+  width: 100%;
+  justify-content: center;
+}
+
+.multioptionCell {
+  margin: 0;
+  padding: 0 15px;
+  list-style: decimal;
+}

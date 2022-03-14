@@ -1,0 +1,101 @@
+@import "../../../assets/css/Dimensions.scss";
+@import "../../../assets/css/Colors.scss";
+
+.profilePhoto {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  background-size: contain;
+}
+
+.headerBreadcrumbsWrap {
+
+  header {
+    border-bottom: 1px solid #ececec;
+    height: $headerHeight;
+    display: flex;
+    align-items: center;
+
+    .menuIcon {
+      display: none;
+    }
+
+    .logout {
+      margin-left: auto;
+      text-decoration: none;
+      margin-right: 15px;
+
+      span {
+        font-size: 21px;
+        border-radius: 100%;
+        overflow: hidden;
+        padding: 5px;
+      }
+
+      :global {
+        .ant-dropdown {
+          min-width: 15em !important;
+          .ant-dropdown-menu-item {
+            display: flex;
+            align-items: center;
+
+            &:hover {
+              span {
+                opacity: 1;
+              }
+            }
+            a {
+              display: inline-block;
+              width: 100%;
+              &:hover {
+                color: #000000;
+              }
+            }
+            span {
+              background: transparent;
+              padding: 0px;
+              border-radius: 0%;
+              opacity: 0.65;
+              path {
+                fill: initial;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    h3 {
+      margin-bottom: 0;
+      margin-left: 10px;
+      color: $primary-blue;
+    }
+    .breadcrumbs {
+      display: flex;
+      align-items: baseline;
+      span {
+        padding: 0 5px;
+      }
+    }
+  }
+  p {
+    margin-bottom: 0;
+    padding: 0 10px;
+    opacity: 0.6;
+    margin-top: 5px;
+    display: inline;
+    color: initial;
+    text-decoration: underline;
+  }
+  em {
+    color: initial;
+    opacity: 0.3;
+  }
+}
+
+/* Responsive */
+@media only screen and (max-width: 960px) {
+  .breadcrumbs {
+    padding-left: 30px;
+  }
+}

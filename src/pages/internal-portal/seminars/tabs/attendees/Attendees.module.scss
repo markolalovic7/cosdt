@@ -1,0 +1,17 @@
+.AttendeesTable {
+  :global {
+    .ant-table table {
+      width: auto !important;
+    }
+    .ant-table-thead {
+      tr {
+        th.ant-table-cell:last-child {
+          min-width: 210px;
+          width: 210px;
+          display: table-cell;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
